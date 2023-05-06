@@ -2,7 +2,6 @@ FROM rust:1.59 as build
 ENV CARGO_TERM_COLOR="always"
 WORKDIR /app
 COPY . .
-RUN ls -la > dir.txt
 RUN cargo build --release
 FROM debian:buster-slim
 ENV CARGO_TERM_COLOR="always"
